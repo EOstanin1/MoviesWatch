@@ -3,4 +3,13 @@
     <string name="back">Back</string>
     <string name="storylineLable">Storyline</string>
     <string name="castLabel">Cast</string>
+    <string name="age_rating">13+</string>
+    <string name="name_movie">Avengers:\nEnd Game</string>
+    <string name="tag_movie">Action, Advanture, Fantasy</string>
+    <string name="count_rewiews">125 reviews</string>
+    <string name="storyline_text">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="actor_1">Robert\nDowney Jr.</string>
+    <string name="actor_2">Chris\nEvans</string>
+    <string name="actor_3">Mark\nRuffalo</string>
+    <string name="actor_4">Chris\nHemsworth</string>
 </resources>
