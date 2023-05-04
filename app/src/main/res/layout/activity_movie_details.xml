@@ -254,7 +254,7 @@
 
         <TextView
             android:id="@+id/nameActor_1"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/actor_1"
             android:textColor="@color/white"
@@ -266,7 +266,7 @@
 
         <TextView
             android:id="@+id/nameActor_2"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/actor_2"
             android:textColor="@color/white"
@@ -279,7 +279,7 @@
 
         <TextView
             android:id="@+id/nameActor_3"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/actor_3"
             android:textColor="@color/white"
@@ -293,7 +293,7 @@
 
         <TextView
             android:id="@+id/nameActor_4"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/actor_4"
             android:textColor="@color/white"
