@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:textAlignment="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_movies_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground"
+        android:padding="@dimen/default_margin_x8">
+
+        <ImageView
+            android:id="@+id/target_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/target"
+            app:layout_constraintEnd_toStartOf="@id/movies_list_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movies_list_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_x4"
+            android:text="@string/movies_list_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/target_icon"
+            app:layout_constraintStart_toEndOf="@id/target_icon"
+            app:layout_constraintTop_toTopOf="@id/target_icon" />
+
+        <ImageView
+            android:id="@+id/border_poster"
+            android:layout_width="160dp"
+            android:layout_height="296dp"
+            android:src="@drawable/round_rect"
+            android:layout_marginTop="@dimen/default_margin_x12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movies_list_label"/>
+
+        <ImageView
+            android:id="@+id/poster_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moviepostersmall"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:background="@drawable/background_round_rect"
+            app:layout_constraintStart_toStartOf="@id/border_poster"
+            app:layout_constraintTop_toTopOf="@id/border_poster"
+            app:layout_constraintEnd_toEndOf="@id/border_poster"/>
+
+        <ImageView
+            android:id="@+id/poster_small_mask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moviepostersmallmask"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="@id/poster_small"
+            app:layout_constraintEnd_toEndOf="@id/poster_small"
+            app:layout_constraintStart_toStartOf="@id/poster_small"
+            app:layout_constraintBottom_toBottomOf="@id/poster_small" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/age_marker_shape"
+            android:layout_width="@dimen/default_margin_x12"
+            android:layout_height="@dimen/default_margin_x12"
+            android:layout_margin="@dimen/default_margin_x3"
+            android:background="@color/mainBackground"
+            app:layout_constraintStart_toStartOf="@id/border_poster"
+            app:layout_constraintTop_toTopOf="@id/border_poster" />
+
+        <TextView
+            android:id="@+id/age_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_x2"
+            android:gravity="center"
+            android:text="13+"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text"
+            app:layout_constraintBottom_toBottomOf="@id/age_marker_shape"
+            app:layout_constraintEnd_toEndOf="@id/age_marker_shape"
+            app:layout_constraintStart_toStartOf="@id/age_marker_shape"
+            app:layout_constraintTop_toTopOf="@id/age_marker_shape" />
+
+        <ImageView
+            android:id="@+id/like_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_x3"
+            android:src="@drawable/like_icon"
+            app:layout_constraintTop_toTopOf="@id/age_marker_shape"
+            app:layout_constraintBottom_toBottomOf="@id/age_marker_shape"
+            app:layout_constraintEnd_toEndOf="@id/border_poster"/>
+
+        <TextView
+            android:id="@+id/tagMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin_x3"
+            android:gravity="start"
+            android:text="@string/tag_movie"
+            android:textColor="@color/textRed"
+            android:textSize="@dimen/x_small_text"
+            app:layout_constraintStart_toStartOf="@id/border_poster"
+            app:layout_constraintBottom_toTopOf="@id/countReviews"/>
+
+        <ImageView
+            android:id="@+id/ratingStar_1"
+            android:layout_width="@dimen/default_margin_x4"
+            android:layout_height="@dimen/default_margin_x4"
+            android:layout_marginEnd="@dimen/one_margin"
+            android:layout_marginStart="@dimen/default_margin_x3"
+            android:src="@drawable/staricon"
+            app:layout_constraintBottom_toBottomOf="@id/countReviews"
+            app:layout_constraintTop_toTopOf="@id/countReviews"
+            app:layout_constraintEnd_toStartOf="@id/ratingStar_2"
+            app:layout_constraintStart_toStartOf="@id/border_poster"/>
+
+        <ImageView
+            android:id="@+id/ratingStar_2"
+            android:layout_width="@dimen/default_margin_x4"
+            android:layout_height="@dimen/default_margin_x4"
+            android:layout_margin="@dimen/one_margin"
+            android:src="@drawable/staricon"
+            app:layout_constraintBottom_toBottomOf="@id/countReviews"
+            app:layout_constraintTop_toTopOf="@id/countReviews"
+            app:layout_constraintEnd_toStartOf="@id/ratingStar_3"
+            app:layout_constraintStart_toEndOf="@id/ratingStar_1"/>
+
+        <ImageView
+            android:id="@+id/ratingStar_3"
+            android:layout_width="@dimen/default_margin_x4"
+            android:layout_height="@dimen/default_margin_x4"
+            android:layout_margin="@dimen/one_margin"
+            android:src="@drawable/staricon"
+            app:layout_constraintBottom_toBottomOf="@id/countReviews"
+            app:layout_constraintTop_toTopOf="@id/countReviews"
+            app:layout_constraintEnd_toStartOf="@id/ratingStar_4"
+            app:layout_constraintStart_toEndOf="@id/ratingStar_2"/>
+
+        <ImageView
+            android:id="@+id/ratingStar_4"
+            android:layout_width="@dimen/default_margin_x4"
+            android:layout_height="@dimen/default_margin_x4"
+            android:layout_margin="@dimen/one_margin"
+            android:src="@drawable/staricon"
+            app:layout_constraintBottom_toBottomOf="@id/countReviews"
+            app:layout_constraintTop_toTopOf="@id/countReviews"
+            app:layout_constraintEnd_toStartOf="@id/ratingStar_5"
+            app:layout_constraintStart_toEndOf="@id/ratingStar_3"/>
+
+        <ImageView
+            android:id="@+id/ratingStar_5"
+            android:layout_width="@dimen/default_margin_x4"
+            android:layout_height="@dimen/default_margin_x4"
+            android:layout_margin="@dimen/one_margin"
+            android:src="@drawable/staricon"
+            app:layout_constraintBottom_toBottomOf="@id/countReviews"
+            app:layout_constraintTop_toTopOf="@id/countReviews"
+            app:layout_constraintStart_toEndOf="@id/ratingStar_4"/>
+
+        <TextView
+            android:id="@+id/countReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_x2"
+            android:layout_marginBottom="@dimen/default_margin_x4"
+            android:gravity="start"
+            android:text="@string/count_rewiews"
+            android:textAllCaps="true"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/x_small_text"
+            app:layout_constraintStart_toEndOf="@id/ratingStar_5"
+            app:layout_constraintBottom_toBottomOf="@id/poster_small_mask" />
+
+        <TextView
+            android:id="@+id/movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_x4"
+            android:gravity="start"
+            android:lines="1"
+            android:text="Avengers: End Game"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text"
+            app:layout_constraintStart_toStartOf="@id/border_poster"
+            app:layout_constraintBottom_toTopOf="@id/duration_movie"/>
+
+        <TextView
+            android:id="@+id/duration_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_x4"
+            android:layout_marginBottom="@dimen/default_margin_x4"
+            android:gravity="start"
+            android:text="@string/duration_movie"
+            android:textSize="@dimen/x_small_text"
+            android:textColor="@color/textGray"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="@id/border_poster"
+            app:layout_constraintBottom_toBottomOf="@id/border_poster"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

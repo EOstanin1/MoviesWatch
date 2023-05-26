@@ -9,6 +9,7 @@
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_movies_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="@dimen/default_margin_x8"
@@ -72,6 +73,7 @@
             android:id="@+id/nameMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:lines="2"
             android:gravity="center_vertical"
             android:text="@string/name_movie"
             android:textColor="@color/white"
